@@ -1049,3 +1049,237 @@ footer { grid-template-columns: 1fr auto; min-height: 260px; align-items: end; }
   .crew-arrow { display: none; }
   .merch-copy-centered .glitch-console { max-width: 100%; }
 }
+
+/* WAY2SPEED V6 updates */
+.artist-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1280px;
+}
+.artist-card {
+  min-height: 720px;
+}
+.artist-card:nth-child(3) img { animation-delay: -4s; }
+.artist-card:nth-child(4) img { animation-delay: -1s; }
+
+.crew {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(49,240,239,.08), transparent 22%),
+    radial-gradient(circle at 85% 68%, rgba(255,48,78,.08), transparent 24%),
+    linear-gradient(180deg, #040408 0%, #050407 100%);
+}
+.crew-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  gap: 10px;
+}
+.crew-kicker {
+  margin: 0 0 6px;
+}
+.crew-title {
+  margin: 0;
+  text-align: center;
+  line-height: .84;
+}
+.crew-title span {
+  display: inline-block;
+}
+.crew-one-liner {
+  margin: 10px 0 28px;
+  max-width: none;
+  white-space: nowrap;
+}
+.crew-links {
+  width: min(980px, 100%);
+  display: grid;
+  gap: 20px;
+}
+.crew-link-rich {
+  grid-template-columns: 56px 74px 1fr auto;
+  gap: 18px;
+  width: 100%;
+  text-align: left;
+  padding: 22px 26px;
+  border-color: rgba(255,255,255,.14);
+  background:
+    linear-gradient(90deg, rgba(49,240,239,.08), transparent 30%),
+    radial-gradient(circle at 88% 50%, rgba(255,48,78,.10), transparent 38%),
+    rgba(255,255,255,.03);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+.crew-link-rich:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,.02);
+}
+.crew-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 20px;
+}
+.crew-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+.crew-meta strong {
+  font-size: clamp(20px, 2.5vw, 34px);
+}
+.crew-meta small {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.crew-arrow {
+  transition: transform .2s ease, color .2s ease;
+}
+.footer-collage {
+  min-height: 500px;
+  background:
+    linear-gradient(180deg, rgba(5,4,7,1) 0%, rgba(5,4,7,.78) 18%, rgba(5,4,7,.45) 42%, rgba(2,2,3,.62) 100%),
+    url('assets/way2crew-bg.png') center/cover no-repeat;
+}
+.footer-collage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(180deg, #050407 0%, rgba(5,4,7,0) 100%);
+  pointer-events: none;
+}
+.footer-collage .footer-slogan {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 980px) {
+  .artist-grid {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+  .crew-one-liner {
+    white-space: normal;
+  }
+  .crew-link-rich {
+    grid-template-columns: 50px 62px 1fr auto;
+    padding: 18px 18px;
+  }
+  .crew-icon {
+    width: 62px;
+    height: 62px;
+  }
+  .crew-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .crew-link-rich {
+    grid-template-columns: 44px 54px 1fr;
+    gap: 12px;
+  }
+  .crew-meta strong {
+    font-size: 24px;
+  }
+  .crew-meta small {
+    font-size: 11px;
+  }
+}
+
+/* V6.1 - clean product preview, no promotional poster */
+.site-header .site-slogan {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 9px;
+  font-size: 10px;
+  letter-spacing: .19em;
+  line-height: 1.4;
+  color: rgba(245,239,230,.86);
+  background: rgba(4,4,7,.27);
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.merch-copy-centered { max-width: 1130px; }
+.merch-copy-centered > .kicker,
+.merch-copy-centered > h2,
+.merch-copy-centered > .section-one-liner { text-align: center; }
+.merch-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(285px, .8fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 60px);
+  margin-top: 18px;
+}
+.merch-stage .merch-console { width: 100%; max-width: none; }
+.merch-stage .glitch-title { font-size: clamp(28px, 3.1vw, 55px); }
+.merch-item {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  min-height: 410px;
+  padding: 10px 10px 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.merch-item::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 94%; height: 84%;
+  top: 8%; left: 3%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 30% 55%, rgba(49,240,239,.10), transparent 60%),
+    radial-gradient(ellipse at 75% 48%, rgba(255,48,78,.11), transparent 60%);
+  filter: blur(23px);
+}
+.merch-shirt-float {
+  width: min(100%, 430px);
+  animation: merch-float 6s ease-in-out infinite;
+}
+.merch-shirt {
+  display: block;
+  width: 100%; height: auto;
+  filter: drop-shadow(0 25px 30px rgba(0,0,0,.6));
+  transition: filter .3s ease;
+}
+.merch-item:hover .merch-shirt {
+  filter: drop-shadow(-8px 0 22px rgba(49,240,239,.08)) drop-shadow(9px 0 20px rgba(255,48,78,.09)) drop-shadow(0 26px 30px rgba(0,0,0,.7));
+}
+.merch-item-caption {
+  margin-top: -2px;
+  color: rgba(245,239,230,.58);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-align: center;
+}
+@keyframes merch-float {
+  0%,100% { transform: translateY(4px) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+@media (max-width: 900px) {
+  .merch-stage { grid-template-columns: 1fr; gap: 14px; }
+  .merch-item { min-height: 0; order: -1; }
+  .merch-shirt-float { width: min(75vw, 400px); }
+  .merch-stage .merch-console { width: min(100%,760px); margin-inline: auto; }
+  .merch .section-one-liner { white-space: normal; }
+}
+@media (max-width: 600px) {
+  .merch-item { padding: 0; }
+  .merch-shirt-float { width: min(82vw, 360px); }
+  .site-header .site-slogan { font-size: 9px; max-width: 90vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .merch-shirt-float { animation: none; }
+}

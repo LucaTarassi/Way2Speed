@@ -1,0 +1,26 @@
+WAY2SPEED - MISE A JOUR V3 SUR GITHUB / VERCEL
+================================================
+
+SITE ACTUEL : https://way2speed.vercel.app/
+GITHUB : https://github.com/LucaTarassi/Way2Speed
+
+Le depot GitHub a deja tous les assets. Seuls deux fichiers sont modifies :
+- index.html
+- styles.css
+
+1. Ouvre https://github.com/LucaTarassi/Way2Speed
+2. Clique sur Add file > Upload files.
+3. Decompresse l'archive way2speed-v3-mise-a-jour-github.zip.
+4. Depose index.html et styles.css (situes a la racine du ZIP).
+5. Verifie que GitHub indique la mise a jour de ces deux fichiers.
+6. Dans Commit changes, donne le message : Simplifier Way2Speed V3.
+7. Clique sur Commit changes sur la branche main.
+8. Ouvre le tableau de bord Vercel > projet way2speed > Deployments.
+9. Attends le statut Ready puis ouvre https://way2speed.vercel.app/
+10. Si tu vois l'ancienne version, rafraichis avec Ctrl + F5.
+
+NOTES
+-----
+- Ne supprime pas le dossier assets ou les autres fichiers du depot.
+- Pas besoin de recreer un projet Vercel : le lien public reste identique.
+- Le logo et la video ne sont pas changes ; seul le texte superflu est retire.

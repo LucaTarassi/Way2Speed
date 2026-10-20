@@ -19,7 +19,6 @@
   <div class="ambient ambient-b" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <span class="site-slogan" aria-label="WE ARE KIDS TOGETHER">WE ARE KIDS TOGETHER</span>
     <nav class="desktop-nav" aria-label="Navigation principale">
       <a href="#artists" data-scramble>WAY2ARTISTES</a>
       <a href="#sound" data-scramble>WAY2SOUND</a>
@@ -33,6 +32,7 @@
       <a href="#merch">WAY2MERCH</a>
       <a href="#show">WAY2SHOW</a>
     </nav>
+    <span class="site-slogan" aria-label="WE ARE KIDS TOGETHER">WE ARE KIDS TOGETHER</span>
   </header>
 
   <main>
@@ -91,6 +91,24 @@
             <strong class="ghost-btn inline-link">OPEN INSTAGRAM ↗</strong>
           </div>
         </a>
+
+        <a class="artist-card reveal" data-tilt href="https://www.instagram.com/luca_trss/" target="_blank" rel="noreferrer" aria-label="Voir l'Instagram de Lux">
+          <div class="artist-card-bg"></div>
+          <div class="artist-badge">RESIDENT_03</div>
+          <img src="assets/lux-cutout.png" alt="Lux — WAY2SPEED resident" />
+          <div class="artist-overlay artist-overlay-minimal">
+            <strong class="ghost-btn inline-link">OPEN INSTAGRAM ↗</strong>
+          </div>
+        </a>
+
+        <a class="artist-card reveal" data-tilt href="https://www.instagram.com/wmr.marti/" target="_blank" rel="noreferrer" aria-label="Voir l'Instagram de Papi">
+          <div class="artist-card-bg"></div>
+          <div class="artist-badge">RESIDENT_04</div>
+          <img src="assets/papi-cutout.png" alt="Papi — WAY2SPEED resident" />
+          <div class="artist-overlay artist-overlay-minimal">
+            <strong class="ghost-btn inline-link">OPEN INSTAGRAM ↗</strong>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -143,11 +161,19 @@
         <p class="kicker">003 / PHYSICAL OBJECTS</p>
         <h2>WAY2<br><span>MERCH</span></h2>
         <p class="section-one-liner">Retrouvez ici tout le merchandising de Way2Speed.</p>
-        <div class="glitch-console merch-console" role="status" aria-label="Merchandising prochainement disponible">
-          <div class="console-top"><span>W2S://MERCH_ACCESS</span><span><i class="signal-indicator"></i> SEARCHING</span></div>
-          <div class="console-body"><span class="console-error">SYSTEM_NOTICE_001</span><strong class="glitch-title" data-text="COMING SOON">COMING SOON</strong><span class="console-sub">DROP NOT FOUND _ INVENTORY LOADING<span class="cursor-block">_</span></span></div>
-          <div class="console-progress"><span></span></div>
-          <div class="console-bottom"><span>PLEASE STAND BY</span><span>NO ITEMS DETECTED</span></div>
+        <div class="merch-stage">
+          <div class="glitch-console merch-console" role="status" aria-label="Merchandising prochainement disponible">
+            <div class="console-top"><span>W2S://MERCH_ACCESS</span><span><i class="signal-indicator"></i> SEARCHING</span></div>
+            <div class="console-body"><span class="console-error">SYSTEM_NOTICE_001</span><strong class="glitch-title" data-text="COMING SOON">COMING SOON</strong><span class="console-sub">DROP NOT FOUND _ INVENTORY LOADING<span class="cursor-block">_</span></span></div>
+            <div class="console-progress"><span></span></div>
+            <div class="console-bottom"><span>PLEASE STAND BY</span><span>NO ITEMS DETECTED</span></div>
+          </div>
+          <div class="merch-item" data-tilt>
+            <div class="merch-shirt-float">
+              <img class="merch-shirt" src="assets/way2speed-merch-shirt.png" alt="Aperçu du t-shirt noir Way2Speed avec logo chrome bleu et orange" loading="lazy" />
+            </div>
+            <span class="merch-item-caption">PRODUCT_001 // LOCKED</span>
+          </div>
         </div>
       </div>
     </section>
@@ -168,15 +194,15 @@
 
     <section class="section crew" id="crew">
       <div class="crew-shell reveal">
-        <div class="crew-copy">
-          <p class="kicker">005 / SOCIAL GATE</p>
-          <h2>REJOINS LE<br><span>WAY2CREW</span></h2>
-          <p class="section-one-liner crew-one-liner">Tous les accès vers l’univers Way2Speed, au même endroit.</p>
-        </div>
+        <p class="kicker crew-kicker">005 / SOCIAL GATE</p>
+        <h2 class="crew-title">WAY2<span>CREW</span></h2>
+        <p class="section-one-liner crew-one-liner">Tous les accès vers l’univers Way2Speed, au même endroit.</p>
         <div class="crew-links">
           <a class="crew-link crew-link-rich" href="https://soundcloud.com/way2speed?ref=clipboard&p=i&c=1&si=39A13402C6C14EA0A08D12B49CFA95F7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noreferrer">
             <span class="crew-index">01</span>
-            <span class="crew-icon crew-icon-soundcloud" aria-hidden="true">☁</span>
+            <span class="crew-icon crew-icon-soundcloud" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path d="M24 46H15a7 7 0 0 1 0-14c.6 0 1.2.08 1.8.23A13.5 13.5 0 0 1 42 27.2 9.5 9.5 0 1 1 45.5 46H24Z" fill="currentColor"/><rect x="10" y="36" width="3" height="10" rx="1" fill="currentColor"/><rect x="6" y="38" width="3" height="8" rx="1" fill="currentColor"/></svg>
+            </span>
             <div class="crew-meta">
               <strong>SoundCloud</strong>
               <small>streams, sets, archived signals</small>
@@ -185,7 +211,9 @@
           </a>
           <a class="crew-link crew-link-rich" href="https://www.youtube.com/@Way2Speed-Collective" target="_blank" rel="noreferrer">
             <span class="crew-index">02</span>
-            <span class="crew-icon crew-icon-youtube" aria-hidden="true">▶</span>
+            <span class="crew-icon crew-icon-youtube" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" aria-hidden="true"><rect x="10" y="18" width="44" height="28" rx="10" fill="currentColor"/><path d="M28 25l13 7-13 7V25Z" fill="#0b0a10"/></svg>
+            </span>
             <div class="crew-meta">
               <strong>YouTube</strong>
               <small>videos, edits, visual loops</small>
@@ -194,7 +222,9 @@
           </a>
           <a class="crew-link crew-link-rich" href="https://www.instagram.com/way2speed.collective/" target="_blank" rel="noreferrer">
             <span class="crew-index">03</span>
-            <span class="crew-icon crew-icon-instagram" aria-hidden="true">◎</span>
+            <span class="crew-icon crew-icon-instagram" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" aria-hidden="true"><rect x="15" y="15" width="34" height="34" rx="10" ry="10" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="43.5" cy="20.5" r="3.5" fill="currentColor"/></svg>
+            </span>
             <div class="crew-meta">
               <strong>Instagram</strong>
               <small>DA, flyers, stories, updates</small>
