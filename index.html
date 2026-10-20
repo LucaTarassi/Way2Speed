@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#050407" />
+  <title>WAY2SPEED — Electronic Collective</title>
+  <meta name="description" content="WAY2SPEED — collectif de musique électronique. Artistes, music, merch et shows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      <a href="#artists" data-scramble>WAY2ARTISTES</a>
+      <a href="#music" data-scramble>WAY2MUSIC</a>
+      <a class="mini-mark" href="#top" aria-label="Retour en haut">W2S</a>
+      <a href="#merch" data-scramble>WAY2MERCH</a>
+      <a href="#show" data-scramble>WAY2SHOW</a>
+    </nav>
+    <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">MENU // 04</button>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile">
+      <a href="#artists">WAY2ARTISTES</a>
+      <a href="#music">WAY2MUSIC</a>
+      <a href="#merch">WAY2MERCH</a>
+      <a href="#show">WAY2SHOW</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="WAY2SPEED">
+      <div class="video-bg" aria-hidden="true">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/tKw8_HbY8cs?autoplay=1&mute=1&controls=0&loop=1&playlist=tKw8_HbY8cs&modestbranding=1&playsinline=1&rel=0"
+          title="WAY2SPEED background video"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          tabindex="-1"></iframe>
+      </div>
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="orb orb-a" aria-hidden="true"></div>
+      <div class="orb orb-b" aria-hidden="true"></div>
+      <svg class="spiral" viewBox="0 0 500 500" aria-hidden="true">
+        <path id="spiral-path" d="" />
+      </svg>
+
+      <div class="hud-label hud-left">SIGNAL / STRANGE / SYSTEM</div>
+      <div class="hud-label hud-right">WAY2SPEED // PORTAL</div>
+
+      <div class="hero-content">
+        <div class="logo-window glitch-box" data-tilt>
+          <img src="assets/way2speed-logo-chrome.png" alt="WAY2SPEED Collective" />
+        </div>
+        <div class="hero-intro reveal in">
+          <p class="kicker">ELECTRONIC COLLECTIVE / PARIS / ELSEWHERE</p>
+          <h1>ENTER THE<br><span>WAY2WORLD</span></h1>
+          <p class="hero-copy">Un portail rave entre jeu vidéo, bug graphique, spirale psychédélique et vitesse numérique. Hard groove, techno et signaux étranges.</p>
+        </div>
+        <div class="hero-meta">
+          <span>[ COLLECTIVE_TRANSMISSION ]</span>
+          <span>ERROR_2_FAST_4_REALITY</span>
+          <span>SCROLL ↓</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="WAY2SPEED loop">
+      <div class="marquee-track">
+        <span>WAY2SPEED // HARD GROOVE // TECHNO // TRANCE // STRANGE SIGNAL // VIDEO GAME ENERGY // WAY2SPEED // HARD GROOVE // TECHNO // TRANCE //</span>
+        <span aria-hidden="true">WAY2SPEED // HARD GROOVE // TECHNO // TRANCE // STRANGE SIGNAL // VIDEO GAME ENERGY // WAY2SPEED // HARD GROOVE // TECHNO // TRANCE //</span>
+      </div>
+    </section>
+
+    <section class="section artists" id="artists">
+      <div class="section-head reveal">
+        <p class="kicker">001 / RESIDENT DATABASE</p>
+        <h2>WAY2<br><span>ARTISTES</span></h2>
+        <p>Cartes holographiques, identités mouvantes et accès direct vers leurs univers.</p>
+      </div>
+
+      <div class="artist-grid">
+        <a class="artist-card reveal" data-tilt href="https://www.instagram.com/moonarch.wav/" target="_blank" rel="noreferrer" aria-label="Voir l'Instagram de Moonarch">
+          <div class="artist-card-bg"></div>
+          <div class="artist-badge">RESIDENT_01</div>
+          <img src="assets/moonarch-cutout.png" alt="Moonarch — WAY2SPEED resident" />
+          <div class="artist-overlay">
+            <span>FLOATING ENTITY</span>
+            <h3>MOONARCH</h3>
+            <strong class="ghost-btn inline-link">OPEN INSTAGRAM ↗</strong>
+          </div>
+        </a>
+
+        <a class="artist-card reveal" data-tilt href="https://www.instagram.com/usbmanas/" target="_blank" rel="noreferrer" aria-label="Voir l'Instagram de Manas">
+          <div class="artist-card-bg"></div>
+          <div class="artist-badge">RESIDENT_02</div>
+          <img src="assets/manas-cutout.png" alt="Manas — WAY2SPEED resident" />
+          <div class="artist-overlay">
+            <span>RITUAL FREQUENCY</span>
+            <h3>MANAS</h3>
+            <strong class="ghost-btn inline-link">OPEN INSTAGRAM ↗</strong>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section music" id="music">
+      <div class="section-head reveal">
+        <p class="kicker">002 / AUDIO TRANSMISSIONS</p>
+        <h2>WAY2<br><span>MUSIC</span></h2>
+        <p>Le signal se propage entre YouTube, SoundCloud et les visuels du collectif.</p>
+      </div>
+      <div class="sound-grid reveal">
+        <div class="wave-panel">
+          <div class="wave" aria-hidden="true"></div>
+          <p>WAY2SPEED TRANSMISSION</p>
+          <h3>THE SIGNAL IS ALREADY INSIDE.</h3>
+          <div class="music-links">
+            <a class="acid-link" href="https://www.youtube.com/watch?v=tKw8_HbY8cs" target="_blank" rel="noreferrer">WATCH ON YOUTUBE ↗</a>
+            <a class="acid-link" href="https://soundcloud.com/way2speed?ref=clipboard&p=i&c=1&si=39A13402C6C14EA0A08D12B49CFA95F7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noreferrer">LISTEN ON SOUNDCLOUD ↗</a>
+          </div>
+        </div>
+        <img class="manifesto" src="assets/manifesto.png" alt="WAY2SPEED manifesto visual" />
+      </div>
+    </section>
+
+    <section class="section merch" id="merch">
+      <div class="merch-copy reveal">
+        <p class="kicker">003 / PHYSICAL OBJECTS</p>
+        <h2>WAY2<br><span>MERCH</span></h2>
+        <p class="big-copy">DROP_001 IS LOADING.</p>
+        <p>Pièces limitées, artefacts du collectif, textiles et objets non identifiés. Une salle d’attente immersive pour les futurs drops.</p>
+        <a href="#crew" class="ghost-btn inline">FOLLOW THE NEXT DROP →</a>
+      </div>
+      <div class="merch-portal reveal" aria-hidden="true">
+        <div class="portal-ring p1"></div>
+        <div class="portal-ring p2"></div>
+        <div class="portal-ring p3"></div>
+        <div class="portal-core">W2S</div>
+      </div>
+    </section>
+
+    <section class="section show" id="show">
+      <div class="section-head reveal">
+        <p class="kicker">004 / LIVE ACCESS</p>
+        <h2>WAY2<br><span>SHOW</span></h2>
+        <p>Tableau d’accès live pour les prochaines apparitions du collectif.</p>
+      </div>
+      <div class="show-board reveal">
+        <div class="show-row show-row-head"><span>DATE</span><span>CITY / VENUE</span><span>STATUS</span></div>
+        <div class="show-row"><span>XX.XX.26</span><span>NEXT TRANSMISSION</span><span class="blink">ANNOUNCING...</span></div>
+        <div class="show-row muted"><span>--.--.--</span><span>UNKNOWN LOCATION</span><span>LOCKED</span></div>
+        <div class="show-row muted"><span>--.--.--</span><span>UNKNOWN LOCATION</span><span>LOCKED</span></div>
+      </div>
+    </section>
+
+    <section class="section crew" id="crew">
+      <div class="crew-shell reveal">
+        <div class="crew-copy">
+          <p class="kicker">005 / SOCIAL GATE</p>
+          <h2>REJOINS LE<br><span>WAY2CREW !</span></h2>
+          <p>Retrouve le collectif sur ses plateformes et suis les prochaines transmissions.</p>
+        </div>
+        <div class="crew-links">
+          <a class="crew-link" href="https://soundcloud.com/way2speed?ref=clipboard&p=i&c=1&si=39A13402C6C14EA0A08D12B49CFA95F7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noreferrer">
+            <span class="crew-index">01</span>
+            <strong>SoundCloud</strong>
+            <small>streams, sets, archived signals</small>
+          </a>
+          <a class="crew-link" href="https://www.youtube.com/@Way2Speed-Collective" target="_blank" rel="noreferrer">
+            <span class="crew-index">02</span>
+            <strong>YouTube</strong>
+            <small>videos, edits, visual loops</small>
+          </a>
+          <a class="crew-link" href="https://www.instagram.com/way2speed.collective/" target="_blank" rel="noreferrer">
+            <span class="crew-index">03</span>
+            <strong>Instagram</strong>
+            <small>DA, flyers, stories, updates</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#top" class="footer-logo">WAY2SPEED</a>
+    <p>WE MOVE FASTER THAN THE FRAME RATE.</p>
+    <a href="https://www.instagram.com/way2speed.collective/" target="_blank" rel="noreferrer">COLLECTIVE INSTAGRAM ↗</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
