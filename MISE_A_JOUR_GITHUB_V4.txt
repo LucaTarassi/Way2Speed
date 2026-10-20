@@ -1,0 +1,28 @@
+WAY2SPEED - MISE A JOUR V4 / GITHUB + VERCEL
+===========================================
+
+Site: https://way2speed.vercel.app/
+Depot: https://github.com/LucaTarassi/Way2Speed
+
+Modifications :
+- WAY2MUSIC devient WAY2SOUND dans le menu et le titre de section.
+- 3 pochettes Moonarch, animees au survol, ouvrent les 3 liens SoundCloud.
+- WAY2MERCH affiche un ecran COMING SOON style bug + phrase de contexte.
+- WAY2SHOW affiche un ecran STAY TUNED radar/scan + phrase de contexte.
+- WE ARE KIDS TOGETHER apparait tout en haut (dans le header) et tout en bas (footer).
+- Le logo et la video de la home restent inchanges.
+
+METTRE A JOUR SUR GITHUB
+------------------------
+1. Decompresser le ZIP way2speed-v4-github-update.zip.
+2. Sur https://github.com/LucaTarassi/Way2Speed, ouvrir Add file > Upload files.
+3. IMPORTANT: le dossier assets doit rester un dossier: deposer ensemble
+   index.html, styles.css, ET le dossier assets qui contient les 3 pochettes JPG.
+   Si votre navigateur n'accepte pas l'envoi du dossier avec les fichiers,
+   ouvrir le dossier assets du depot et y televerser les 3 JPG separement.
+4. Ne pas televerser le fichier ZIP tel quel.
+5. Cliquer Commit changes sur la branche main.
+6. Vercel redeploie automatiquement. Ouvrir ensuite https://way2speed.vercel.app/
+7. Si l'ancienne version apparait, appuyer sur Ctrl + F5.
+
+Les anciens assets ne doivent pas etre supprimes.
