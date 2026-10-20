@@ -1,0 +1,19 @@
+WAY2SPEED V7 - MISE A JOUR GITHUB + VERCEL
+
+Contenu :
+- styles.css : menu du haut legerement plus grand sur ordinateur
+- assets/moonarch-cutout.png : en-tete WAY2SPEED
+- assets/manas-cutout.png : en-tete WAY2SPEED
+- assets/lux-cutout.png : nouvelle carte avec typographie gothique et cadre harmonise + en-tete WAY2SPEED
+- assets/papi-cutout.png : nouvelle carte avec typographie gothique et cadre harmonise + en-tete WAY2SPEED
+
+Mise en ligne :
+1. Decompresse le ZIP de mise a jour.
+2. Va sur https://github.com/LucaTarassi/Way2Speed (branche main).
+3. Add file > Upload files (a la racine du depot).
+4. Glisse styles.css ET le dossier assets contenant les 4 cartes.
+5. Commit changes pour enregistrer le remplacement.
+6. Dans Vercel, la mise en ligne devrait etre automatique.
+7. Recharge https://way2speed.vercel.app/ avec Ctrl+F5.
+
+Aucun besoin de modifier index.html ou script.js dans cette mise a jour.

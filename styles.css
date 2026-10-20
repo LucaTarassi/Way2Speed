@@ -1283,3 +1283,15 @@ footer { grid-template-columns: 1fr auto; min-height: 260px; align-items: end; }
 @media (prefers-reduced-motion: reduce) {
   .merch-shirt-float { animation: none; }
 }
+
+/* WAY2SPEED V7: larger navigation, all other sections unchanged */
+@media (min-width: 981px) {
+  .desktop-nav {
+    gap: clamp(20px, 2.4vw, 48px);
+    padding: 14px 27px;
+  }
+  .desktop-nav a {
+    font-size: clamp(14px, 1.03vw, 16px);
+    letter-spacing: .075em;
+  }
+}
