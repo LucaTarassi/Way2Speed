@@ -1295,3 +1295,219 @@ footer { grid-template-columns: 1fr auto; min-height: 260px; align-items: end; }
     letter-spacing: .075em;
   }
 }
+
+
+/* WAY2SPEED V8: animated chromatic glitch on section headlines (desktop hover only).
+   The heading keeps its original geometry; the layers are visual only. */
+.section h2 span[data-glitch] {
+  position: relative;
+  display: inline-block;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .section h2:hover {
+    animation: way2-title-offset 1.05s steps(1,end) infinite;
+  }
+  .section h2:hover span[data-glitch]::before,
+  .section h2:hover span[data-glitch]::after {
+    content: attr(data-glitch);
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    white-space: nowrap;
+    color: transparent;
+    opacity: .83;
+  }
+  .section h2:hover span[data-glitch]::before {
+    -webkit-text-stroke: 1px #42f8f6;
+    text-shadow: -5px -1px rgba(49,240,239,.65);
+    animation: way2-glitch-a .47s steps(1,end) infinite;
+  }
+  .section h2:hover span[data-glitch]::after {
+    -webkit-text-stroke: 1px #ff4662;
+    text-shadow: 5px 1px rgba(255,48,78,.66);
+    animation: way2-glitch-b .62s steps(1,end) infinite;
+  }
+}
+@keyframes way2-title-offset {
+  0%, 67%, 73%, 90%, 100% {transform:translate3d(0,0,0)}
+  69% {transform:translate3d(2px,-1px,0)}
+  71% {transform:translate3d(-3px,1px,0)}
+  92% {transform:translate3d(1px,1px,0)}
+  94% {transform:translate3d(-1px,0,0)}
+}
+@keyframes way2-glitch-a {
+  0%,100% {clip-path:inset(5% 0 84% 0);transform:translateX(-3px)}
+  28% {clip-path:inset(60% 0 22% 0);transform:translateX(4px)}
+  48% {clip-path:inset(39% 0 45% 0);transform:translateX(-6px)}
+  78% {clip-path:inset(13% 0 68% 0);transform:translateX(3px)}
+}
+@keyframes way2-glitch-b {
+  0%,100% {clip-path:inset(80% 0 8% 0);transform:translateX(4px)}
+  20% {clip-path:inset(20% 0 66% 0);transform:translateX(-4px)}
+  52% {clip-path:inset(48% 0 36% 0);transform:translateX(6px)}
+  83% {clip-path:inset(72% 0 12% 0);transform:translateX(-3px)}
+}
+
+/* V8 responsive repairs: ONLY tablet/mobile; desktop V7 layout is untouched. */
+@media (max-width: 980px) {
+  html { overflow-x: clip; }
+  body { min-width: 320px; overflow-x: clip; }
+  /* The fixed overlay used to cover artist photos when scrolling. Keep the menu at the top of the page. */
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 96px;
+    padding: 14px 18px 34px;
+    background: linear-gradient(180deg, rgba(4,4,7,.96), rgba(4,4,7,.81));
+    border-bottom: 1px solid rgba(255,255,255,.09);
+    backdrop-filter: none;
+  }
+  .site-header.scrolled {
+    background: linear-gradient(180deg, rgba(4,4,7,.96), rgba(4,4,7,.81));
+    backdrop-filter: none;
+  }
+  .mobile-toggle { position: relative; z-index: 2; margin-left: auto; }
+  .site-header .site-slogan {
+    top: auto;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 24px);
+    overflow: visible;
+    padding: 0;
+    line-height: 1.35;
+    background: transparent;
+    font-size: 10px;
+    letter-spacing: .16em;
+  }
+  .mobile-menu { top: 64px; z-index: 3; }
+  .hero { min-height: 690px; padding-top: 115px; }
+  .hero-content { min-height: max(520px, calc(100svh - 166px)); }
+  .section { padding: clamp(72px,10vw,108px) 26px; }
+  .section-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(15px,2.2vw,23px);
+    margin-bottom: clamp(34px,5vw,54px);
+    min-width: 0;
+  }
+  .section-head .kicker { margin: 0; }
+  .section-head h2 { max-width: 100%; }
+  .artist-grid {
+    width: 100%;
+    max-width: 620px;
+    margin-inline: auto;
+    gap: 34px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .artist-card {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px;
+  }
+  .artist-card img {
+    width: min(100%, 460px);
+    max-height: none;
+    height: auto;
+    margin: 8px auto 0;
+  }
+  .artist-badge { top: 12px; left: 12px; }
+  .artist-overlay-minimal {
+    position: relative;
+    left: auto; right: auto; bottom: auto;
+    align-self: stretch;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    margin-top: 6px;
+    background: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .artist-overlay-minimal .ghost-btn { margin: 0; }
+  .release-card { min-width: 0; }
+  .release-details { flex-wrap: wrap; }
+  .release-arrow { margin-top: 8px; }
+  .crew-title { max-width: 100%; }
+  .merch-stage .merch-console { max-width: 100%; }
+  .footer-collage { overflow: hidden; }
+}
+@media (max-width: 600px) {
+  .site-header { min-height: 90px; padding: 12px 16px 34px; }
+  .site-header .site-slogan { bottom: 9px; font-size: 9px; letter-spacing: .1em; }
+  .mobile-toggle { padding: 10px 12px; font-size: 12px; }
+  .mobile-menu { top: 59px; }
+  .hero {
+    min-height: min(810px, 100svh);
+    padding: 92px 10px 20px;
+  }
+  .hero-content {
+    min-height: max(470px, calc(100svh - 112px));
+  }
+  .logo-window { width: min(100%, 530px); }
+  .spiral { width: min(88vw,520px); }
+  .section {
+    padding: 62px 18px 76px;
+  }
+  .section-head {
+    gap: 15px;
+    margin-bottom: 34px;
+  }
+  /* Michroma has very wide glyphs: keep the largest title inside the viewport. */
+  .section h2,
+  .section-head h2 {
+    font-size: clamp(27px, 8.5vw, 44px);
+    letter-spacing: -.065em;
+    line-height: 1.02;
+    max-width: 100%;
+  }
+  .crew-title { font-size: clamp(27px, 8.5vw, 44px); }
+  .kicker { font-size: 10px; letter-spacing: .09em; }
+  .artist-grid { gap: 22px; }
+  .artist-card {
+    padding: 24px 12px 12px;
+    min-height: 0;
+  }
+  .artist-card img { width: min(100%, 430px); }
+  .artist-overlay-minimal { margin-top: 4px; }
+  .artist-overlay-minimal .ghost-btn { padding: 10px 12px; font-size: 12px; }
+  .sound-ui-head, .sound-endline { gap: 10px; }
+  .sound-ui-head > span:first-child { min-width: 0; }
+  .merch-copy-centered .glitch-console { max-width: 100%; }
+  .merch-stage { gap: 12px; }
+  .merch-item { margin-top: 8px; }
+  .section-one-liner, .show > .section-one-liner {
+    font-size: 13px;
+    line-height: 1.55;
+    white-space: normal;
+  }
+  .console-top, .console-bottom { gap: 6px; }
+  .console-body { padding: 24px 14px; }
+  .glitch-title { font-size: clamp(26px, 7.5vw, 43px); }
+  .crew-shell { gap: 15px; }
+  .crew-one-liner { max-width: 100%; margin: 6px 0 16px; }
+  .crew-links { gap: 12px; }
+  .crew-link-rich { grid-template-columns: 40px 47px minmax(0,1fr); gap: 10px; padding: 14px 10px; }
+  .crew-index { width: 40px; height: 40px; font-size: 10px; }
+  .crew-icon { width: 47px; height: 47px; border-radius: 14px; }
+  .crew-icon svg { width: 24px; height: 24px; }
+  .crew-meta strong { font-size: clamp(16px, 5vw, 22px); }
+  .crew-meta small { font-size: 10px; }
+  .footer-collage { min-height: 280px; }
+  .footer-collage .footer-slogan {
+    font-size: clamp(22px,7.5vw,35px);
+    max-width: 100%;
+    line-height: 1.14;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section h2:hover, .section h2 span[data-glitch]::before,
+  .section h2 span[data-glitch]::after { animation: none !important; }
+}

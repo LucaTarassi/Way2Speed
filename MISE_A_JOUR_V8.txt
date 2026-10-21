@@ -1,0 +1,13 @@
+WAY2SPEED V8 - Correctif mobile + glitch titres
+
+Fichiers à remplacer dans GitHub à la racine de la branche main :
+- index.html
+- styles.css
+
+Ces modifications ne changent PAS les tailles, grilles et espacements desktop (largeur > 980px).
+Mobile : titres adaptés à l’écran, menu non flottant sur les cartes, bandeau slogan dans l’en-tête, cartes sans espaces vides, écarts revus dans les sections et blocs.
+Ordinateur : animation glitch chromatique au survol des titres (Way2Artistes, Way2Sound, Way2Merch, Way2Show, Way2Crew).
+
+Dépôt : https://github.com/LucaTarassi/Way2Speed
+Site : https://way2speed.vercel.app/
+GitHub > Add file > Upload files : remplacez les deux fichiers, validez avec Commit changes sur main. Le déploiement Vercel doit se lancer automatiquement.
